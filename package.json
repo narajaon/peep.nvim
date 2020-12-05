@@ -1,0 +1,24 @@
+{
+  "name": "peep.nvim",
+  "version": "1.0.0",
+  "description": "nvim dev",
+  "main": "src/init.js",
+  "repository": "git@github.com:narajaon/peep.vim.git",
+  "author": "narajaon <rajaonarisonfabien@yahoo.fr>",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {},
+  "scripts": {
+    "lint": "yarn eslint src",
+    "dev": "yarn webpack --mode development",
+    "watch": "yarn webpack --watch",
+    "watch:ck": "chokidar src/* 'open http://reload.extensions/'"
+  },
+  "devDependencies": {
+    "eslint": "^7.15.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "webpack": "^5.10.0",
+    "webpack-cli": "^4.2.0"
+  }
+}

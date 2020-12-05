@@ -1,0 +1,14 @@
+{
+  "name": "peep.nvim",
+  "version": "1.0",
+  "description": "nvim peeping",
+  "background": {
+    "scripts": ["index.js", "src/init.js"],
+    "persistent": false
+  },
+  "page_action": {
+    "default_title": "peep.nvim"
+  },
+  "permissions": ["declarativeContent"],
+  "manifest_version": 2
+}
