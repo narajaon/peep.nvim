@@ -3,12 +3,24 @@
   "version": "1.0",
   "description": "nvim peeping",
   "background": {
-    "scripts": ["index.js", "src/init.js"],
+    "scripts": ["background.js"],
     "persistent": false
   },
-  "page_action": {
+  "browser_action": {
     "default_title": "peep.nvim"
   },
-  "permissions": ["declarativeContent"],
+  "content_scripts": [
+    {
+      "matches": ["*://*.eurosport.fr/"],
+      "js": ["content.js"]
+    }
+  ],
+  "permissions": [
+    "declarativeContent",
+    "tabs",
+    "http://*/",
+    "https://*/",
+    "notifications"
+  ],
   "manifest_version": 2
 }

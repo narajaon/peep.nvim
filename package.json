@@ -2,7 +2,6 @@
   "name": "peep.nvim",
   "version": "1.0.0",
   "description": "nvim dev",
-  "main": "src/init.js",
   "repository": "git@github.com:narajaon/peep.vim.git",
   "author": "narajaon <rajaonarisonfabien@yahoo.fr>",
   "license": "MIT",

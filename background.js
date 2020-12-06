@@ -16,15 +16,6 @@
  *     - when I close the firenvim, I should be in anchor mode
  */
 
-const MODES = {
-  normal: 'normal',
-  select: 'select',
-  peep: 'peep',
-};
-
-chrome.tabs.insertCSS({ file: 'src/style.css' });
-
-chrome.pageAction.onClicked.addListener((tab) => {
-  chrome.tabs.insertCSS({ file: 'src/selectStyle.css' });
-  chrome.tabs.excecuteScript({ file: 'src/addPeepClass.js' });
+chrome.browserAction.onClicked.addListener((tab) => {
+  chrome.tabs.sendMessage(tab.id, { mode: 'select' });
 });
